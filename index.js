@@ -48,7 +48,8 @@ function checkAnswer(currentLevel) {
       $("body").removeClass("game-over");
     }, 200);
 
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("#level-title").text("Game Over");
+    $(".start-btn").show();
     startOver();
   }
 }
@@ -66,7 +67,17 @@ $(".btn").on("click", (e) => {
   checkAnswer(userClickedPattern.length - 1);
 });
 
-$(document).on("keypress", () => {
+// $(document).on("keypress", () => {
+//   if (!started) {
+//     started = true;
+//     $(`#level-title`).text("Level " + level);
+//     nextSequence();
+//   }
+// });
+
+$(".start-btn").on("click", () => {
+  $(".start-btn").hide();
+  $(".start-btn").text("Retry");
   if (!started) {
     started = true;
     $(`#level-title`).text("Level " + level);
