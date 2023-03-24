@@ -6,7 +6,8 @@ body {
 #level-title {
   font-family: "Press Start 2P", cursive;
   font-size: 3rem;
-  margin: 5%;
+  /* margin: 5%; */
+  margin: 5% auto 2%;
   color: #fef2bf;
 }
 
